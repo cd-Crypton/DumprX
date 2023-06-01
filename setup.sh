@@ -47,7 +47,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	    sleep 1
 	    echo -e ${BLUE}">> Installing Required Packages..."${NORMAL}
 	    sleep 1
-        sudo apt install -y unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract device-tree-compiler liblzma-dev python3-pip brotli liblz4-tool axel gawk aria2 detox cpio rename liblz4-dev jq || abort "Setup Failed!"
+        sudo apt install -y unace zip unzip p7zip-full sharutils uudeview mpack arj cabextract device-tree-compiler liblzma-dev python3-pip brotli liblz4-tool axel gawk aria2 detox cpio rename liblz4-dev jq || abort "Setup Failed!"
 
     elif [[ "$(command -v dnf)" != "" ]]; then
 
@@ -57,7 +57,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	    sleep 1
 
 	    # "dnf" automatically updates repos before installing packages
-        sudo dnf install -y unace unrar zip unzip sharutils uudeview arj cabextract file-roller dtc python3-pip brotli axel aria2 detox cpio lz4 python3-devel xz-devel p7zip p7zip-plugins || abort "Setup Failed!"
+        sudo dnf install -y unace zip unzip sharutils uudeview arj cabextract file-roller dtc python3-pip brotli axel aria2 detox cpio lz4 python3-devel xz-devel p7zip p7zip-plugins || abort "Setup Failed!"
 
     elif [[ "$(command -v pacman)" != "" ]]; then
 
